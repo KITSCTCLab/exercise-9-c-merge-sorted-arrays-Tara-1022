@@ -1,13 +1,25 @@
 from typing import List
 
 def merge(nums1: List[int], m: int, nums2: List[int], n: int) -> None:
-  pos, i = 0, 0
-  while pos < m + n:
-    if nums1[pos] < nums2[i]:
-      pos += 1
-    else:
-      nums1.insert(pos, nums2[i])
+  l1 = nums1[:]
+  l2 = nums2[:]
+  curr, i, j = 0, 0, 0
+  while i < m and j < n:
+    if l1[i] < l2[j]:
+      nums1[curr] = l1[i]
       i += 1
+    else:
+      nums1[curr] = l2[j]
+      j += 1
+    curr += 1
+  while i < m:
+    nums[curr] = l1[i]
+    curr += 1
+    i += 1
+  while j < n:
+    nums[curr] = l2[j]
+    curr += 1
+    j += 1
 
 
 # Do not change the following code
