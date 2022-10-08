@@ -13,11 +13,11 @@ def merge(nums1: List[int], m: int, nums2: List[int], n: int) -> None:
       j += 1
     curr += 1
   while i < m:
-    nums[curr] = l1[i]
+    nums1[curr] = l1[i]
     curr += 1
     i += 1
   while j < n:
-    nums[curr] = l2[j]
+    nums1[curr] = l2[j]
     curr += 1
     j += 1
 
