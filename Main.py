@@ -1,6 +1,11 @@
 from typing import List
 
 def merge(nums1: List[int], m: int, nums2: List[int], n: int) -> None:
+  #Function implementing merging of two sorted arrays
+  #Input: nums1 -> array
+  #       m -> number of elements of nums1
+  #       nums2 -> array
+  #       n -> number of elements of nums2
   l1 = nums1[:]
   l2 = nums2[:]
   curr, i, j = 0, 0, 0
@@ -22,7 +27,7 @@ def merge(nums1: List[int], m: int, nums2: List[int], n: int) -> None:
     j += 1
 
 
-# Do not change the following code
+# Do noT change the following code
 nums1 = []
 nums2 = []
 for item in input().split(', '):
